@@ -1,0 +1,28 @@
+html{
+  border: 10px solid black;
+    body{
+        width: 800px;
+    background-color: #30ffff;
+    margin: 0 auto;
+    background-image: url('agora_vai.jpg');
+
+    }
+p{
+    
+    font-size:35px;
+    color:rgb(11, 11, 11);
+    width: 500px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+h1{
+     
+    color:rgb(240, 237, 60);
+    width: 56px;
+    border: 2px solid rgb(198, 93, 93);
+    
+}
+
+
+
+}
