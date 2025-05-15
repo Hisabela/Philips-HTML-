@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>teste</title>
+    
+</head>
+<body>
+        
+    <br> 
+    <h1><button> Olá mundo</button></h1>
+    <h3><p><b><i>Me chamo Hisabela<i><b><p></h3>
+        <h3><p>Hello<p><h3>
+
+        <ol>
+            <li>banana<li>
+            <li>pera<li>
+            <li>abacaxi<li>
+            </ol>
+
+        <ul>
+            <br>
+            <br>
+            <br>
+            <br>
+            <li>banana<li>
+            <li>pera<li>
+            <li>abacaxi<li>
+                <br>
+            </ul>
+
+            <dd>frutas<dd>
+            <br>
+
+    <p><a href="https://share.philips.com/sites/PhilipsDesenvolve-Estagirios/Documentos%20Compartilhados/Forms/AllItems.aspx?id=%2Fsites%2FPhilipsDesenvolve%2DEstagirios%2FDocumentos%20Compartilhados%2FHTML%20%2B%20CSS%2FLeitura%2FHTML%2BCSS%2DM03%2Epdf&parent=%2Fsites%2FPhilipsDesenvolve%2DEstagirios%2FDocumentos%20Compartilhados%2FHTML%20%2B%20CSS%2FLeitura"> clique aqui</a></p>
+
+        <h3>TABELA<h3>
+            <table border="5">
+                <tr>
+                    <td>R$ 1000</td>
+                    <td>R$ 2000</td>
+                    <td>R$ 3000</td>
+                    </tr>
+                    </table>
+
+                    <br>
+                <table border="1">
+                    <tr>
+                        <td>Nome</td>
+                        <td>Cidade</td>
+                        </tr>
+                    <tr>
+                        <td>Hisabela</td>
+                        <td>Blumenau</td>
+                    </tr>
+                </table>
+                </br>
+
+                <img src="minha_foto.jpg" alt="minha foto" height="200" width="200"/>
+
+            
+    <img style="height: 300px;" src="" alt="foto de perfil">
+<br>
+    <input type="text"/>
+
+<br>
+    <input type="password">
+<br>
+    <input type="radio"/>
+<br>
+    <input type="email"/> 
+
+<br>
+<form>
+    Nome: <input type="text" name="nome">
+    <br>
+    Sobrenome: <input type="text" name="sobrenome">
+    </form>
+
+    <form>
+        <label for="homem">Masculino</label>
+        <input type="radio" name="sexo" id="homem" value="masculino" /><br/>
+        <label for="mulher">Feminino</label>
+        <input type="radio" name="sexo" id="mulher" value="feminino" /><br/>
+        </form>
+
+    
+
+</body>
+</html>
