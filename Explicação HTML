@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!-- Declara que este é um documento HTML5 -->
+
+<html lang="pt-br">
+<!-- Início do documento HTML com idioma português brasileiro -->
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Define a codificação de caracteres como UTF-8 -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Torna o site responsivo, ajustando a largura na tela do dispositivo -->
+
+  <title>Hisabela da Rocha Campos</title>
+  <!-- Título que aparece na aba do navegador -->
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Link para um arquivo CSS externo (se existir) -->
+
+  <style>
+    /* Estilo interno para o documento */
+
+    body {
+      margin: 0;
+      padding: 0;
+      /* Remove margens e espaçamentos padrões */
+
+      font-family: 'Segoe UI', sans-serif;
+      /* Define a fonte usada no texto */
+
+      color: #3a3a3a;
+      /* Cor do texto principal */
+
+      background: url('fundo.png') no-repeat center center fixed;
+      /* Imagem de fundo centralizada, fixa e sem repetição */
+
+      background-size: cover;
+      /* Faz a imagem cobrir toda a área do fundo */
+
+      transition: background-color 0.3s ease, color 0.3s ease;
+      /* Suaviza as transições de cor e fundo para tema claro/escuro */
+    }
+
+    .container {
+      max-width: 900px;
+      /* Largura máxima da área principal */
+
+      margin: auto;
+      /* Centraliza horizontalmente */
+
+      padding: 20px;
+      /* Espaço interno */
+
+      background-color: rgba(255, 255, 255, 0.8);
+      /* Fundo branco com leve transparência */
+
+      border-radius: 10px;
+      /* Bordas arredondadas */
+
+      transition: background-color 0.3s ease, color 0.3s ease;
+      /* Transição suave para mudanças visuais */
+    }
+
+    header {
+      display: flex;
+      /* Usamos flexbox para alinhar os itens em linha */
+
+      align-items: center;
+      /* Alinha verticalmente ao centro */
+
+      gap: 20px;
+      /* Espaço entre os itens */
+    }
+
+    .photo {
+      width: 120px;
+      height: 120px;
+      /* Define o tamanho da área da foto */
+
+      border: 2px dashed #d59fa0;
+      /* Borda tracejada rosa claro */
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* Centraliza o conteúdo (a imagem) */
+
+      overflow: hidden;
+      /* Esconde partes da imagem que ultrapassam a área */
+
+      border-radius: 10px;
+      /* Bordas arredondadas */
+
+      background-color: #fff0f1;
+      /* Fundo rosa clarinho */
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      /* Faz a imagem ocupar toda a área do container */
+
+      object-fit: cover;
+      /* Corta a imagem proporcionalmente para preencher o container */
+    }
+
+    h1 {
+      font-size: 2em;
+      /* Tamanho grande para o nome */
+
+      color: #4b2e2f;
+      /* Cor vinho escuro */
+    }
+
+    section {
+      margin-top: 30px;
+      /* Espaço acima de cada seção */
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      /* Espaço abaixo dos títulos de seção */
+
+      color: #5a3e3e;
+      /* Cor marrom avermelhada */
+    }
+
+    ul {
+      list-style: none;
+      /* Remove marcadores padrão da lista */
+
+      padding-left: 0;
+      /* Remove espaçamento lateral */
+    }
+
+    ul li {
+      margin: 6px 0;
+      /* Espaço entre os itens da lista */
+
+      font-size: 1.1em;
+      /* Tamanho um pouco maior do texto */
+    }
+
+    .form-section form {
+      display: flex;
+      flex-direction: column;
+      /* Campos do formulário em coluna */
+
+      max-width: 300px;
+      /* Largura máxima para o formulário */
+
+      gap: 10px;
+      /* Espaço entre os campos */
+    }
+
+    input, textarea {
+      padding: 10px;
+      /* Espaço interno nos campos */
+
+      border: 1px solid #d59fa0;
+      /* Borda rosa clara */
+
+      border-radius: 4px;
+      /* Cantos arredondados */
+
+      font-family: inherit;
+      /* Usa a mesma fonte do corpo */
+    }
+
+    button {
+      padding: 10px;
+      background-color: #e5a6a6;
+      /* Cor de fundo rosa */
+
+      color: white;
+      /* Cor do texto */
+
+      border: none;
+      /* Sem borda */
+
+      border-radius: 5px;
+      /* Cantos arredondados */
+
+      cursor: pointer;
+      /* Cursor muda para mãozinha ao passar o mouse */
+    }
+
+    /* Estilo para mensagens de erro em formulários */
+    .error {
+      color: red;
+      font-size: 0.85em;
+      margin-top: -6px;
+      margin-bottom: 6px;
+      /* Espaços pequenos para ajustar a mensagem */
+    }
+
+    /* Estilos para tema escuro */
+    body.dark {
+      background: #121212 url('fundo.png') no-repeat center center fixed;
+      /* Fundo escuro com mesma imagem */
+
+      background-size: cover;
+      color: #ddd;
+      /* Texto claro para contraste */
+    }
+
+    body.dark .container {
+      background-color: rgba(30, 30, 30, 0.85);
+      /* Fundo do container escuro com transparência */
+
+      color: #eee;
+      /* Texto claro */
+    }
+
+    body.dark input, 
+    body.dark textarea {
+      background-color: #333;
+      border: 1px solid #b06b6b;
+      color: #eee;
+      /* Campos escuros com borda rosa e texto claro */
+    }
+
+    body.dark button {
+      background-color: #b06b6b;
+      /* Botão rosa escuro */
+    }
+
+    /* Botão para alternar tema */
+    #toggleThemeBtn {
+      margin: 15px auto;
+      /* Espaço acima e abaixo e centralizado horizontalmente */
+
+      display: block;
+      padding: 8px 20px;
+      background-color: #e5a6a6;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-size: 1em;
+      max-width: 150px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Botão para alternar entre temas -->
+  <button id="toggleThemeBtn">Tema Escuro</button>
+
+  <div class="container">
+    <header>
+      <div class="photo">
+        <!-- Imagem de perfil -->
+        <img src="perfil.jpg" alt="Sua Foto de Perfil" />
+      </div>
+      <h1>Hisabela da Rocha Campos</h1>
+    </header>
+
+    <section class="about">
+      <h2>Sobre mim</h2>
+      <p>
+        ✨ Sobre mim<br />
+        Sou uma garota que adora espalhar alegria por onde passa. Sempre busco enxergar o lado bom de cada momento e estou disposta a ajudar no que for preciso. Amo lugares calmos, mas também não resisto a uma leve bagunça e boas risadas — principalmente quando crio intimidade com as pessoas. Contar piadas e fazer os outros sorrirem é um dos meus superpoderes. Estou sempre em busca da minha melhor versão. 💖
+      </p>
+      <ul>
+        <li>📖 Ler</li>
+        <li>🎵 Ouvir música</li>
+        <li>🎭 Teatro</li>
+        <li>🎸 Tocar violão</li>
+        <li>🎹 Tocar teclado</li>
+        <li>🚲 Andar de bicicleta</li>
+        <li>🟢 Jogar The Sims</li>
+      </ul>
+    </section>
+
+    <section class="contact-info">
+      <h2>Meus contatos</h2>
+      <ul>
+        <li>📞 47 99700-9493</li>
+        <li>📧 hisabelacampos@gmail.com</li>
+        <li>📧 hrcampos@gmail.com</li>
+        <li>📷 insta: hisa_campos</li>
+        <li>💻 github: HisabelaPhilips</li>
+        <li>🔗 linkedin: Hisabela-Campos</li>
+      </ul>
+    </section>
+
+    <section class="form-section">
+      <h2>Formulário de contato</h2>
+      <form id="contactForm" novalidate>
+        <!-- Campo nome -->
+        <input type="text" id="name" placeholder="Nome" />
+        <div id="errorName" class="error"></div>
+        <!-- Espaço para mensagem de erro nome -->
+
+        <!-- Campo e-mail -->
+        <input type="email" id="email" placeholder="E-mail" />
+        <div id="errorEmail" class="error"></div>
+        <!-- Espaço para mensagem de erro e-mail -->
+
+        <!-- Campo mensagem -->
+        <textarea id="message" placeholder="Mensagem"></textarea>
+        <div id="errorMessage" class="error"></div>
+        <!-- Espaço para mensagem de erro mensagem -->
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    // Seleciona o botão que troca o tema (claro/escuro) pelo ID
+    const toggleBtn = document.getElementById('toggleThemeBtn');
+
+    // Quando clicar no botão...
+    toggleBtn.addEventListener('click', () => {
+      // Adiciona ou remove a classe 'dark' no <body>
+      document.body.classList.toggle('dark');
+
+      // Se a classe 'dark' está ativa, muda texto do botão para 'Tema Claro'
+      if(document.body.classList.contains('dark')){
+        toggleBtn.textContent = 'Tema Claro';
+      } else {
+        // Senão, mostra 'Tema Escuro'
+        toggleBtn.textContent = 'Tema Escuro';
+      }
+    });
+
+    // Seleciona o formulário e os campos para validação
+    const form = document.getElementById('contactForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    // Seleciona onde serão exibidas as mensagens de erro
+    const errorName = document.getElementById('errorName');
+    const errorEmail = document.getElementById('errorEmail');
+    const errorMessage = document.getElementById('errorMessage');
+
+    // Quando o formulário for enviado...
+    form.addEventListener('submit', (e) => {
+      // Previne o comportamento padrão de envio (recarregar página)
+      e.preventDefault();
+
+      // Limpa as mensagens de erro para nova validação
+      errorName.textContent = '';
+      errorEmail.textContent = '';
+      errorMessage.textContent
